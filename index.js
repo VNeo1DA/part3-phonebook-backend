@@ -31,6 +31,10 @@ let persons =
     }
 ];
 
+app.get('/', (request, response) => {
+    response.send('<h1>Hello World!</h1>')
+});
+
 app.get('/info', (request, response) => {
     const currentDate = new Date();
     const nounUsed = persons.length === 1 ? "person" : "people";
